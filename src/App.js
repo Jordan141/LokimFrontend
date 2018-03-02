@@ -11,8 +11,12 @@ class App extends Component {
           <h2>Welcome to React/Electron</h2>
         </div>
         <p className="App-intro">
-          Hello Electron!
+          Hello LokIM User!
         </p>
+        <input type="text" placeholder="Username"/><br/>
+        <input type="password" placeholder="Password"/><br/>
+        <button>Login</button>
+        <button> Create Account </button>
       </div>
     );
   }
