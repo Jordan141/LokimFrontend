@@ -1,0 +1,14 @@
+{
+    "username" : "",
+    "hashedPassword": "",
+    "email": "",
+    "desiredNickname": "",
+    "profilePictureURL": "",
+    "security": {
+        "PUBLIC_KEY": "",
+        "PRIVATE_KEY": "",
+        "SECRET_PHRASE": ""
+    },
+    "friends?": [ "", "", ""],
+    "cacheLocation": "URL_ON_MACHINE"
+}
