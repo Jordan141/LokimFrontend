@@ -1,4 +1,17 @@
+div {
+  background-color: #282c34;
+}
+
+li a{
+  color: white;
+  text-decoration:  none;
+}
+li a:hover{
+  color: white;
+  text-decoration: none;
+}
 .App {
+  height: 100vh;
   text-align: center;
 }
 
@@ -8,8 +21,8 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #14161a;
+  height: 200px;
   padding: 20px;
   color: white;
 }
@@ -22,3 +35,31 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.userInput {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.registerDiv {
+  padding: 12px 20px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.registerDiv h2, li {
+  color: white;
+}
+
+.homeButton {
+  font-size: 20px;
+  margin: 8px;
+}
+.info-paragraph {
+  padding-top: 8px;
+  font-size: 12px;
+  color: white;
+}
+

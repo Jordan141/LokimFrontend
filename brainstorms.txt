@@ -1,0 +1,21 @@
+Instead of saving the personal data on the server it would be an idea to simply make a request to the person and save it in your cache so that if the server is breached, all they get is hashed login info
+but then
+that makes things like friend lists a fucking pain
+ooh
+What if I used an asymmetric encryption algorithm like RSA and have their public key as contact id,
+so that only people you give that key to can contact you, and only you can decrypt messages sent to you
+
+
+User information: Username, password, email, public/private key (NOT STORED ON SERVER)
+
+Public key as contact ID 
+all data encrypted with users public key, decrypted with private key
+Problem 1: stored in cache, they delete cache they lose their keys
+Problem 2: Are keys unique? 
+Problem 3: Using keys as methods of finding other users requires them to be able to communicate with said user on another platform.
+
+better solution: Search via nickname, similar to skype, user stores keys in settings, 
+able to be changed appropriately, contact request requires exchange of public keys, can be done automatically.
+
+Searching limitations for security: user must be online, nickname over 6 characters, 
+can use extension like discord for random #s to avoid using this feature to acquire lists of all users online

@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import Home from './components/home'
+import Register from './components/register'
 import './App.css';
-
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React/Electron</h2>
+      <Router>
+        <div className='container-fluid'>
+          <Route exact path='/' component={Home} />
+          <Route path='/register' component={Register} />
         </div>
-        <p className="App-intro">
-          Hello LokIM User!
-        </p>
-        <input type="text" placeholder="Username"/><br/>
-        <input type="password" placeholder="Password"/><br/>
-        <button>Login</button>
-        <button> Create Account </button>
-      </div>
+      </Router>
     );
   }
 }
