@@ -20,7 +20,7 @@ class Home extends Component {
         this.setState({successfulLogin: true})
     }
     handleChange(event){
-        const settings = ['username', 'password']
+        const settings = {'Username': 'username', 'Password': 'password'}
         //Find key for object using placeholders
         const key = settings[event.target.placeholder]
         //Only change state of specific value
@@ -42,8 +42,8 @@ class Home extends Component {
                 <p className="App-intro">Hello LokIM User!</p>
             </div>
             <form onSubmit={this.login}>
-            <input className='userInput' type="text" value={this.state.username} placeholder="Username" required/><br/>
-            <input className='userInput' type="password" value={this.state.password} placeholder="Password" required/><br/>
+            <input className='userInput' type="text" value={this.state.username} onChange={this.handleChange} placeholder="Username" required/><br/>
+            <input className='userInput' type="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" required/><br/>
             <input type='submit' className='homeButton btn btn-primary' value='Login'/>
             </form>
             <li className="homeButton btn btn-secondary"><Link to='/register'>Create Account</Link></li>
