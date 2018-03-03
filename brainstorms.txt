@@ -19,3 +19,11 @@ able to be changed appropriately, contact request requires exchange of public ke
 
 Searching limitations for security: user must be online, nickname over 6 characters, 
 can use extension like discord for random #s to avoid using this feature to acquire lists of all users online
+
+============ SERVER IDEAS =================
+
+Assymetric encryption
+ - On first connect, send public key to user to encrypt login info for transport
+ - Decrypt on server with private key = secure data
+ - Store salt-hashed login data someplace
+ - Send user public key after successful login and connection to chat sockets, use this key for /api/chat requests.
