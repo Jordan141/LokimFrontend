@@ -24,6 +24,10 @@ class Register extends Component {
     }
     
     handleSubmit(event){
+        //Encrypt all data and send to server
+        //..
+        //..
+        
         alert('A new user was submitted!', JSON.stringify(this.state))
         event.preventDefault()
     }
