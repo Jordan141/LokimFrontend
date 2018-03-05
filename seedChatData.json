@@ -1,0 +1,38 @@
+{
+    "friendsOnline": [
+        {
+            "name": "Jerry",
+            "status": "Online"
+        },
+        {
+            "name": "Brian",
+            "status": "Busy"
+        },
+        {
+            "name": "Timothy",
+            "status": "Away"
+        }
+    ],
+    "rooms": {
+        "ROOM_ID": "X124566",
+        "ROOM_USERS": ["Brian", "Jerry"],
+        "ROOM_MESSAGES": [
+            {
+                "sender": "Brian",
+                "content": "Hello World!",
+                "timestamp": "SOME_UNIX_TIMESTAMP"
+            }
+        ]
+    },
+    "privateMessages": [
+        {
+            "RECIPIENT_USER_ID": "",
+            "MESSAGES": [
+                {
+                "content": "Hello World!",
+                "timestamp": "SOME_UNIX_TIMESTAMP"
+                }
+            ]
+        }
+    ]
+}
