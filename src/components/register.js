@@ -41,8 +41,9 @@ class Register extends Component {
                 <input type='text' className='userInput' placeholder='Email' value={this.state.email} onChange={this.handleChange} required/><br/>
                 <input type='text' className='userInput' placeholder='Secret Key' value={this.state.secret} onChange={this.handleChange} required/><br/>
                 <input type='submit' className='btn btn-primary' value='Register'/>
+                <li className='btn btn-secondary' style={{'margin' : '10px 10px'}}><Link to='/'>Go Back</Link></li>
             </form>
-            <li className='btn btn-danger' style={{'margin' : '10px 0'}}><Link to='/'>Go Back</Link></li>
+            
             </div>
         )
     }

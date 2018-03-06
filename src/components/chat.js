@@ -10,8 +10,8 @@ class Chat extends Component {
 
         this.state = {
             items: [
-                <SidebarItem>Dashboard </SidebarItem>,
                 <SidebarItem>Profile</SidebarItem>,
+                <SidebarItem>Friends</SidebarItem>,
                 <SidebarItem>Settings</SidebarItem>
             ],
             messages: [
@@ -29,7 +29,7 @@ class Chat extends Component {
     }
     render(){
         return (
-            <Sidebar content={this.state.items}>
+            <Sidebar background="#013e53" content={this.state.items}>
                 <div className='chatWindow container-fluid'>
                     <div className='menuArea row'>
                         <div className='col-md-10'>
