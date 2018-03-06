@@ -51,10 +51,10 @@ class Chat extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className= 'messageBox row'>
+                    <div className='messageBox row'>
                         <div className='col-md-12'>
                             <div className='textHolder'>
-                                <textarea rows='1' placeholder=" Don't be shy, send a message!" style='height: auto;'/>
+                                <textarea rows='1' placeholder=" Don't be shy, send a message!"/>
                             </div>
                         </div>
                     </div>
