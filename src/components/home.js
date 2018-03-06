@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Link, Redirect} from 'react-router-dom'
-import logo from '../logo.svg';
+import logo from '../Lokim_MAIN.svg';
 
 class Home extends Component {
     constructor(props){

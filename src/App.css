@@ -1,3 +1,7 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 li a{
   color: white;
   text-decoration:  none;
@@ -6,18 +10,22 @@ li a:hover{
   color: white;
   text-decoration: none;
 }
+
 .App {
+  background: linear-gradient(rgb(23,36, 44), rgb(16, 15, 20));
+  border-style: solid;
+  border-color: rgb(1, 62, 83);
+  border-width: 5px;
   height: 100vh;
   text-align: center;
+  width: 100%;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 116px;
 }
 
 .App-header {
-  background-color: #14161a;
   height: 200px;
   padding: 20px;
   color: white;
@@ -25,11 +33,6 @@ li a:hover{
 
 .App-intro {
   font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 .userInput {
@@ -57,5 +60,58 @@ li a:hover{
   padding-top: 8px;
   font-size: 12px;
   color: white;
+}
+
+/* CHAT WINDOW */
+.chatWindow ul {
+  list-style-type: none;
+}
+.chatWindow {
+  background: green;
+  height: 100%;
+}
+
+.menuArea {
+  height: 10%;
+  width: 100%;
+}
+
+.messageArea {
+  background-color: #2a2a2a;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.messageContainer {
+  margin: 5px 0;
+  padding: 0px 5px;
+}
+.messageContainer p{
+  font-size: 90%;
+  color: white;
+}
+
+.textHolder {
+  background-color: #14161a;
+  border-radius: 5px;
+  position: relative;
+}
+
+.messageBox textarea{
+  color: white;
+
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  letter-spacing: -0.025rem;
+  margin: 2px 2px 2px 0;
+  max-height: 144px;
+  min-height: 20px;
+  outline: none;
+  resize: none;
+  width: 100%
 }
 

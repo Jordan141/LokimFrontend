@@ -21,6 +21,21 @@
                 "sender": "Brian",
                 "content": "Hello World!",
                 "timestamp": "SOME_UNIX_TIMESTAMP"
+            },
+            {
+                "sender": "Brian",
+                "content": "Hello World!",
+                "timestamp": "SOME_UNIX_TIMESTAMP"
+            },
+            {
+                "sender": "Brian",
+                "content": "Hello World!",
+                "timestamp": "SOME_UNIX_TIMESTAMP"
+            },
+            {
+                "sender": "Brian",
+                "content": "Hello World!",
+                "timestamp": "SOME_UNIX_TIMESTAMP"
             }
         ]
     },
