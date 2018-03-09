@@ -29,19 +29,14 @@ class Register extends Component {
         //Encrypt all data and send to server
         //..
         axios.post(`http://localhost:5000/register`, this.state)
-            .then(response => {
-                if(response.status === 200){
-                    console.log('Registration successful!')
-                    this.setState({successfulRegister: true})
-                } else {
-                    console.log(`${response.status}: ${response.statusText}`)
-                }
-            })
-            .catch(error => {
-                console.log(error)
-                alert('Something bad happened!')
-            })
-        //alert('A new user was submitted!', JSON.stringify(this.state))
+        .then(response => {
+            if(response.status === 200) this.setState({successfulRegister: true})
+            console.log(`${response.status}: ${response.statusText}`)
+        })
+        .catch(error => {
+            console.log(error)
+            alert('Something bad happened!')
+        })
         event.preventDefault()
     }
     render(){

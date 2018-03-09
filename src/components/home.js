@@ -17,18 +17,14 @@ class Home extends Component {
     }
     login(username, password){
         axios.post(`http://localhost:5000/login`, {username, password})
-            .then(response => {
-                if(response.status === 200){
-                    console.log('Login successful!')
-                    this.setState({successfulLogin: true})
-                } else {
-                    console.log(JSON.stringify(response))
-                }
-            })
-            .catch(error => {
-                console.log(error)
-                alert('Something bad happened! Details:', error)
-            })  
+        .then(response => {
+            if(response.status === 200) this.setState({successfulLogin: true})
+            console.log(`${response.status}: ${response.statusText}`)
+        })
+        .catch(error => {
+            console.log(error)
+            alert('Something bad happened! Details:', error)
+        })  
     }
     handleChange(event){
         const settings = {'Username': 'username', 'Password': 'password'}
