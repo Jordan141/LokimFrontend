@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-
+import axios from 'axios'
+import {URL} from '../../config.json'
 class Register extends Component {
     constructor(props){
         super(props)
@@ -26,9 +27,21 @@ class Register extends Component {
     handleSubmit(event){
         //Encrypt all data and send to server
         //..
-        //..
-        
-        alert('A new user was submitted!', JSON.stringify(this.state))
+        axios.post(`http://localhost:5000/register`, this.state)
+            .then(response => {
+                console.log(response, typeof response, JSON.stringify(response))
+                if(response.status === 200){
+                    alert('Registration successful!')
+                    return
+                } else {
+                    alert(`${response.status}: ${response.statusText}`)
+                }
+            })
+            .catch(error => {
+                console.log(error)
+                alert('Something bad happened!')
+            })
+        //alert('A new user was submitted!', JSON.stringify(this.state))
         event.preventDefault()
     }
     render(){
