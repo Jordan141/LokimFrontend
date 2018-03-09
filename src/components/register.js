@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import axios from 'axios'
-import {URL} from '../../config.json'
+//import {URL} from '../../config.json'
 class Register extends Component {
     constructor(props){
         super(props)
