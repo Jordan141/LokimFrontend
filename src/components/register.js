@@ -7,10 +7,11 @@ class Register extends Component {
         super(props)
 
         this.state = {
-            'username': '',
-            'password': '',
-            'email': '',
-            'secret': ''
+            username: '',
+            password: '',
+            email: '',
+            secret: '',
+            successfulRegister: false
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -29,12 +30,11 @@ class Register extends Component {
         //..
         axios.post(`http://localhost:5000/register`, this.state)
             .then(response => {
-                console.log(response, typeof response, JSON.stringify(response))
                 if(response.status === 200){
-                    alert('Registration successful!')
-                    return
+                    console.log('Registration successful!')
+                    this.setState({successfulRegister: true})
                 } else {
-                    alert(`${response.status}: ${response.statusText}`)
+                    console.log(`${response.status}: ${response.statusText}`)
                 }
             })
             .catch(error => {
@@ -45,6 +45,9 @@ class Register extends Component {
         event.preventDefault()
     }
     render(){
+        if(this.state.successfulRegister){
+            return <Redirect to='/'/>
+        }
         return (
             <div className='container-fluid registerDiv'>
             <h2> Register for a new LokIM Account </h2>
@@ -55,8 +58,7 @@ class Register extends Component {
                 <input type='text' className='userInput' placeholder='Secret Key' value={this.state.secret} onChange={this.handleChange} required/><br/>
                 <input type='submit' className='btn btn-primary' value='Register'/>
                 <li className='btn btn-secondary' style={{'margin' : '10px 10px'}}><Link to='/'>Go Back</Link></li>
-            </form>
-            
+            </form>   
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Link, Redirect} from 'react-router-dom'
+import axios from 'axios'
 import logo from '../Lokim_MAIN.svg';
 
 class Home extends Component {
@@ -14,10 +15,20 @@ class Home extends Component {
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
-    login(user, pass){
-        alert('Login button clicked!')
-        //Login to server, if status returns 200, enter chat component
-        this.setState({successfulLogin: true})
+    login(username, password){
+        axios.post(`http://localhost:5000/login`, {username, password})
+            .then(response => {
+                if(response.status === 200){
+                    console.log('Login successful!')
+                    this.setState({successfulLogin: true})
+                } else {
+                    console.log(JSON.stringify(response))
+                }
+            })
+            .catch(error => {
+                console.log(error)
+                alert('Something bad happened! Details:', error)
+            })  
     }
     handleChange(event){
         const settings = {'Username': 'username', 'Password': 'password'}
