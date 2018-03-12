@@ -11,7 +11,7 @@ class Home extends Component {
             password: '',
             successfulLogin: false
         }
-        this.login = this.login.bind(this)
+
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -23,8 +23,8 @@ class Home extends Component {
         })
         .catch(error => {
             console.log(error)
-            alert('Something bad happened! Details:', error)
-        })  
+            alert('Something bad happened!')
+        })
     }
     handleChange(event){
         const settings = {'Username': 'username', 'Password': 'password'}
@@ -48,7 +48,7 @@ class Home extends Component {
                 <h2>Welcome to Loki Instant Messenger</h2>
                 <p className="App-intro">Hello LokIM User!</p>
             </div>
-            <form onSubmit={this.login}>
+            <form onSubmit={this.handleSubmit}>
             <input className='userInput' type="text" value={this.state.username} onChange={this.handleChange} placeholder="Username" required/><br/>
             <input className='userInput' type="password" value={this.state.password} onChange={this.handleChange} placeholder="Password" required/><br/>
             <input type='submit' className='homeButton btn btn-primary' value='Login'/>
