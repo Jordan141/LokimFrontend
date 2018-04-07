@@ -19,11 +19,11 @@ class Home extends Component {
         axios.post(`http://localhost:5000/login`, {username, password})
         .then(response => {
             if(response.status === 200) this.setState({successfulLogin: true})
-            console.log(`${response.status}: ${response.statusText}`)
+            console.log('Login successful')
         })
         .catch(error => {
             console.log(error)
-            alert('Something bad happened!')
+            alert('Incorrect username or password.')
         })
     }
     handleChange(event){
