@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
 import SweetAlert from 'sweetalert-react';
-
+import io from 'socket.io-client'
 import MessageContainer from './message'
-import seedData from '../../seedChatData'
 import imageURL from '../../resources/carbonFiber.jpg'
 import plus_icon from '../../resources/new_icon.svg'
 class Chat extends Component {
@@ -20,12 +18,12 @@ class Chat extends Component {
         }
     }
     componentDidMount() {
-        console.log(seedData)
-        console.log(seedData.rooms.ROOM_MESSAGES[0])
-        const chatData = seedData.rooms.ROOM_MESSAGES
-        this.setState({ messages: chatData})
+        this.socket = io.connect('http://localhost:5000');
+        this.socket.on('connection', data => console.log(data))
+        
     }
     render(){
+        
         return (
             <div className='chatWindow container-fluid'>
                 <div className='row'>

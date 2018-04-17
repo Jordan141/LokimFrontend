@@ -14,7 +14,9 @@ let mainWindow;
 
 function createWindow() {
     // Create the browser window.
-    mainWindow = new BrowserWindow({width: WIN_WIDTH, height: WIN_HEIGHT});
+    mainWindow = new BrowserWindow({width: WIN_WIDTH, height: WIN_HEIGHT, "web-preferences": {
+        "web-security": false
+      }});
 
     // and load the index.html of the app.
     const startUrl = process.env.ELECTRON_START_URL || url.format({

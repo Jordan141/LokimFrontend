@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link, Redirect} from 'react-router-dom'
 import axios from 'axios'
-import logo from '../Lokim_MAIN.svg';
+import logo from '../../resources/Lokim_MAIN.svg';
 
 class Home extends Component {
     constructor(props){
